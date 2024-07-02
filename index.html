@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Imágenes con Bootstrap y jQuery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4">Manejo de Imágenes con Bootstrap y jQuery</h1>
+            <button id="ocultarImagen" class="btn btn-primary">Ocultar Imagen</button>
+            <button id="mostrarImagen" class="btn btn-success">Mostrar Imagen</button>
+            <br><br>
+            <img id="imagen" src="https://res.cloudinary.com/luubermudezz/image/upload/v1719940932/26249a78777f6e3527d959ed4399dc1e_f1penb.jpg" class="img-fluid" alt="Imagen">
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#ocultarImagen").click(function() {
+                $("#imagen").hide();
+                $("h1.display-4").text("¡No tenemos ninguna imagen!");
+            });
+
+            $("#mostrarImagen").click(function() {
+                $("#imagen").show();
+                $("h1.display-4").text("¡Mirá la siguiente imagen!");
+            });
+        });
+    </script>
+</body>
+</html>
